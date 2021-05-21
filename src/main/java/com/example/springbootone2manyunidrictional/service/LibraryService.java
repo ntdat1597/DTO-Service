@@ -7,11 +7,15 @@ import java.util.List;
 import java.util.Optional;
 
 public interface LibraryService {
-    List<Library> listLibraries();
+    List<Library> listLibraries ();
 
-    Optional<Library> getLibraryById(int id);
-    boolean saveLibrary(Library library);
-    boolean deleteLibrary(int id);
-    boolean updateLibrary(Library library);
-    Page<Library> findPaginated(int pageNo, int pageSize);
+    Optional<Library> getLibraryById (int id);
+
+    boolean saveLibrary (Library library);
+
+    boolean deleteLibrary (int id);
+
+    boolean updateLibrary (Library library);
+
+    Page<Library> findPaginated (int pageNo, int pageSize);
 }

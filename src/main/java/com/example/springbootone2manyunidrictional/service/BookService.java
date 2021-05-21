@@ -8,12 +8,16 @@ import java.util.Optional;
 
 public interface BookService {
 
-    List<Book> listBook();
+    List<Book> listBook ();
 
-    Optional<Book> getBookById(int id);
-    Book saveBook(Book book);
-    void deleteBook(int id);
-    boolean updateBook(Book book);
-    List<Book> lisBookByLibrary(int library_id);
+    Optional<Book> getBookById (int id);
+
+    Book saveBook (Book book);
+
+    void deleteBook (int id);
+
+    boolean updateBook (Book book);
+
+    List<Book> lisBookByLibrary (int library_id);
 
 }

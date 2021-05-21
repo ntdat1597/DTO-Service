@@ -42,8 +42,9 @@ public class BookAPI {
                 .toUri ();
         return ResponseEntity.created (location).body (bookSaved);
     }
+
     @GetMapping
-    public ResponseEntity<Page<Book>> getAll(Pageable pageable){
+    public ResponseEntity<Page<Book>> getAll (Pageable pageable) {
         return ResponseEntity.ok (bookRepository.findAll (pageable));
     }
 

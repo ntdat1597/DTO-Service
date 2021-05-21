@@ -22,8 +22,6 @@ public class Library {
     private String name;
 
 
-
-
     public int getId () {
         return id;
     }

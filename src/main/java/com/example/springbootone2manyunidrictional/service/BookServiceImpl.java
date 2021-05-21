@@ -36,31 +36,29 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteBook (int id) {
-         bookRepository.deleteById (id);
+        bookRepository.deleteById (id);
     }
 
     @Override
     public boolean updateBook (Book book) {
-        try{
-            bookRepository.save(book);
+        try {
+            bookRepository.save (book);
             return true;
 
-        }catch (Exception e)
-        {
-            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace ();
         }
         return false;
     }
 
     @Override
     public List<Book> lisBookByLibrary (int library_id) {
-        try{
+        try {
             List<Book> books = bookRepository.findByLibraryId (library_id);
 
             return books;
-        }catch (Exception e)
-        {
-            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace ();
         }
         return null;
     }

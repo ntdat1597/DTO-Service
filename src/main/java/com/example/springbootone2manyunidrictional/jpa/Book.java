@@ -17,12 +17,10 @@ public class Book {
     @NotNull
     private String name;
 
-
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Library library;
-
 
 
     public Library getLibrary () {
